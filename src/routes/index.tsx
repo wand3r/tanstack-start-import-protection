@@ -7,10 +7,13 @@ import {
   Waves,
   Sparkles,
 } from "lucide-react";
+import { getSecretEnv } from "@/libs/get-sercret-env.server";
 
 export const Route = createFileRoute("/")({ component: App });
 
 function App() {
+  console.log(getSecretEnv());
+
   const features = [
     {
       icon: <Zap className="w-12 h-12 text-cyan-400" />,
